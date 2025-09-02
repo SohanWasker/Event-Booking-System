@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<!--
+  FXML layout for login screen. Uses AnchorPane with absolute positioning.
+-->
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.LoginController" prefWidth="400" prefHeight="300">
+  <children>
+    <Label layoutX="50" layoutY="50" text="Username:"/>
+    <TextField fx:id="usernameField" layoutX="130" layoutY="45" />
+    <Label layoutX="50" layoutY="100" text="Password:"/>
+    <PasswordField fx:id="passwordField" layoutX="130" layoutY="95" />
+    <Button text="Login" layoutX="130" layoutY="150" onAction="#onLogin" />
+    <Button text="Sign Up" layoutX="200" layoutY="150" onAction="#onSignup" />
+    <Label fx:id="messageLabel" layoutX="130" layoutY="200" textFill="red"/>
+  </children>
+</AnchorPane>

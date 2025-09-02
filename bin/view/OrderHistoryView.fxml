@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.OrderHistoryController">
+
+    <top>
+        <Label text="Order History" style="-fx-font-size: 18px; -fx-padding: 10;" />
+    </top>
+
+    <center>
+        <VBox >
+            <!-- Orders Table -->
+            <TableView fx:id="orderTable" prefHeight="200">
+                <columns>
+                    <TableColumn fx:id="orderNumberCol" text="Order #" prefWidth="100" />
+                    <TableColumn fx:id="dateCol" text="Date/Time" prefWidth="200" />
+                    <TableColumn fx:id="totalCol" text="Total Price" prefWidth="120" />
+                </columns>
+            </TableView>
+
+            <Label text="Items in Selected Order" style="-fx-font-size: 14px;" />
+
+            <!-- Items Table -->
+            <TableView fx:id="itemTable" prefHeight="150">
+                <columns>
+                    <TableColumn fx:id="eventCol" text="Event" prefWidth="250" />
+                    <TableColumn fx:id="quantityCol" text="Quantity" prefWidth="100" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER">
+   			<Button text="Export to File" onAction="#onExport" />
+    		<Button text="Close" onAction="#onClose" />
+		</HBox>
+
+
+    </bottom>
+</BorderPane>

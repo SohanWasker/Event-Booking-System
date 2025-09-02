@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.CheckoutController"
+      alignment="CENTER" spacing="10" style="-fx-padding:20;">
+  <Label fx:id="totalLabel" text="Total: AUD 0.00" style="-fx-font-size:14;"/>
+  <Label text="Enter 6-digit confirmation code:"/>
+  <TextField fx:id="codeField" promptText="123456" maxWidth="100"/>
+  <Button fx:id="confirmButton" text="Confirm" onAction="#onConfirm"/>
+  <Label fx:id="messageLabel" textFill="red"/>
+</VBox>

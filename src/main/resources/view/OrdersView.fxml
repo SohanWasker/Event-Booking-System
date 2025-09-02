@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.OrdersController"
+      spacing="10" style="-fx-padding:20;">
+  <TableView fx:id="orderTable">
+    <columns>
+      <TableColumn fx:id="numCol"   text="Order #" prefWidth="80"/>
+      <TableColumn fx:id="dateCol"  text="Date & Time" prefWidth="150"/>
+      <TableColumn fx:id="itemsCol" text="Items" prefWidth="250"/>
+      <TableColumn fx:id="totalCol" text="Total (AUD)" prefWidth="100"/>
+    </columns>
+  </TableView>
+  <Button fx:id="exportButton" text="Export Orders" onAction="#onExport" />
+</VBox>

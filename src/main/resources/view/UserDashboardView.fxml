@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.UserDashboardController">
+
+  <top>
+    <HBox spacing="10" alignment="CENTER_RIGHT" style="-fx-padding: 10;">
+      <Label fx:id="welcomeLabel" text="Welcome!" style="-fx-font-size: 16px;"/>
+      <Pane HBox.hgrow="ALWAYS"/>
+      <Button text="Logout" onAction="#logout"/>
+    </HBox>
+  </top>
+
+  <center>
+    <VBox spacing="10">
+      <TableView fx:id="eventTable" prefHeight="300">
+        <columns>
+          <TableColumn fx:id="titleCol" text="EVENT" prefWidth="150"/>
+          <TableColumn fx:id="venueCol" text="VENUE" prefWidth="120"/>
+          <TableColumn fx:id="dayCol" text="DAY" prefWidth="80"/>
+          <TableColumn fx:id="priceCol" text="PRICE (AUD)" prefWidth="100"/>
+          <TableColumn fx:id="soldCol" text="SOLD" prefWidth="80"/>
+          <TableColumn fx:id="capacityCol" text="CAPACITY" prefWidth="100"/>
+        </columns>
+      </TableView>
+    </VBox>
+  </center>
+
+  <bottom>
+    <VBox spacing="10" alignment="CENTER">
+      <HBox spacing="10" alignment="CENTER">
+        <Label text="Quantity:"/>
+        <Spinner fx:id="quantitySpinner" prefWidth="80"/>
+        <Button fx:id="addToCartButton" text="Add to Cart" onAction="#onAddToCart"/>
+        <Button fx:id="viewCartButton" text="View Cart" onAction="#onViewCart"/>
+      </HBox>
+      <HBox spacing="10" alignment="CENTER">
+        <Button text="View Order History" onAction="#onViewOrders"/>
+        <Button text="Change Password" onAction="#onChangePassword"/>
+      </HBox>
+    </VBox>
+  </bottom>
+
+</BorderPane>

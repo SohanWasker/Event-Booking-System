@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.CartController">
+
+  <!-- Greeting -->
+  <top>
+    <Label fx:id="cartWelcomeLabel"
+           text="Your Cart"
+           style="-fx-font-size:16px; -fx-padding:10;"
+           BorderPane.alignment="CENTER"/>
+  </top>
+
+  <!-- Cart items table -->
+  <center>
+    <TableView fx:id="cartTable" editable="true" prefWidth="600">
+      <columns>
+        <TableColumn fx:id="eventCol"    text="Event"    prefWidth="200"/>
+        <TableColumn fx:id="venueCol"    text="Venue"    prefWidth="150"/>
+        <TableColumn fx:id="dayCol"      text="Day"      prefWidth="80"/>
+        <TableColumn fx:id="qtyCol"      text="Quantity" prefWidth="80" editable="true"/>
+        <TableColumn fx:id="actionCol"   text="Action"   prefWidth="80"/>
+      </columns>
+    </TableView>
+  </center>
+
+  <!-- Checkout button -->
+  <bottom>
+    <HBox alignment="CENTER" style="-fx-padding:10;">
+      <Button fx:id="checkoutButton"
+              text="Checkout"
+              onAction="#onCheckout"/>
+    </HBox>
+  </bottom>
+</BorderPane>
